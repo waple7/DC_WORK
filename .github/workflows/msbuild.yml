@@ -1,8 +1,8 @@
 name: MSBuild
 
-on: [push]
+on: [push] # при каком условии запускается workflow
 
-env:
+env:  
   # Path to the solution file relative to the root of the project.
   SOLUTION_FILE_PATH: .
 
@@ -13,12 +13,12 @@ env:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-latest  # выделяется виртуальная машина где всё тестится
 
-    steps:
+    steps: # шаги
     - uses: actions/checkout@v2
 
-    - name: Add MSBuild to PATH
+    - name: Add MSBuild to PATH     
       uses: microsoft/setup-msbuild@v1.0.2
 
     - name: Restore NuGet packages
