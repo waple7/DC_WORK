@@ -1,4 +1,4 @@
-on:
+on: # релиз при пуше версии с тегом v* и тд
   push:
     # Sequence of patterns matched against refs/tags
     tags:
